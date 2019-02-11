@@ -7,7 +7,7 @@ describe Bank do
   end
 
   it 'balance can be topped up with a deposit' do
-    account = bank.new
-    expect(account.desposit(100)).to eq 100
+    account = Bank.new
+    expect(account.deposit(100)).to eq 100
   end
 end
