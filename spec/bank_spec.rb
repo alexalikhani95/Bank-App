@@ -10,4 +10,10 @@ describe Bank do
     account = Bank.new
     expect(account.deposit(100)).to eq 100
   end
+
+  it 'money can be withdrawn from account, with balance deducted by amount withdrawn' do
+    account = bank.new
+    account.deposit(100)
+    expect(account.withdraw(90)).to eq 10
+  end
 end
