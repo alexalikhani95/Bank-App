@@ -5,4 +5,9 @@ describe Bank do
     account = Bank.new
     expect(account.balance).to eq 0
   end
+
+  it 'balance can be topped up with a deposit' do
+    account = bank.new
+    expect(account.desposit(100)).to eq 100
+  end
 end
