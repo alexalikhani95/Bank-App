@@ -1,4 +1,4 @@
 require 'transaction'
 
-decribe Transaction do
+describe Transaction do
 end
