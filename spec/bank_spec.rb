@@ -24,4 +24,10 @@ describe Bank do
     account.deposit(100)
     expect(account.debit).to eq [100]
   end
+
+  it 'withdrawal should show up as credit' do
+    account = Bank.new
+    account.withdraw(100)
+    expect(account.credit).to eq [100]
+  end
 end
