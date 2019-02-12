@@ -1,4 +1,4 @@
-require 'statement'
+require 'transaction'
 
-describe Statement do
+decribe Transaction do
 end
