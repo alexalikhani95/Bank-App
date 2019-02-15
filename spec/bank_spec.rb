@@ -18,16 +18,4 @@ describe Bank do
     account.withdraw(90)
     expect(account.balance).to eq 10
   end
-
-  it 'deposit added should show up as debit' do
-    account = Bank.new
-    account.deposit(100)
-    expect(account.debit).to eq [100]
-  end
-
-  it 'withdrawal should show up as credit' do
-    account = Bank.new
-    account.withdraw(100)
-    expect(account.credit).to eq [100]
-  end
 end

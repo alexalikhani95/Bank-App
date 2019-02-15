@@ -1,19 +1,19 @@
-class Bank
-  attr_reader :balance, :account_history, :debit, :credit
+require_relative 'transaction'
 
+class Bank
+  attr_reader :balance, :account_history
   def initialize
     @balance = 0
-    @debit = []
-    @credit = []
+    @account_history = []
   end
 
   def deposit(amount)
     @balance += amount
-    @debit.push(amount)
+    @account_history << Transaction.new(amount, nil, balance)
   end
 
   def withdraw(amount)
     @balance -= amount
-    @credit.push(amount)
+    @account_history << Transaction.new(nil, amount, balance)
   end
 end
